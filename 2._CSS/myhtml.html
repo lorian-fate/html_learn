@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /*[name^="my"] --> all hashtag that start with will be modified*/
+        /*[nama$="my"] --> all hashtag that end with will be modified*/
+        /*[name*="ele"] --> all hashtag that have this pattern will be modified*/
+        /*p:nth-child(number) --> specify which hashtag will be modified*/
+        /*p:nth-child(odd) --> all odd hashtag will be modified*/
+        /*p:nth-child(even) --> all even hashtag will be modified*/
+        /*p:first-child{} --> the first p hashtag will be modified*/
+        /*p:last-child{}*/
+        #main{
+            width: 500px;
+            /*background-color: blue;*/
+            text-align: center;
+            margin: 15px auto;
+            padding: 15px;
+            border: 3px solid crimson; /*allow remark the box*/
+            /*border-radius: 15px; allow format the border as a circle. to format the different angle you must to use four measures*/
+            border-radius: 15px 20px 10px 80px;
+            box-shadow: gray 15px 15px 10px; /*allow set a box's shadow. The third param allow make it more real blurring it*/
+            /*background: -moz-linear-gradient(top, rgb(4, 7, 170), rgb(124, 121, 148)); /*allow add color linear degraded in an specific browser*/
+            /*background: -webkit-linear-gradient(left, rgb(4, 7, 170), rgb(229, 81, 255));/*chrome --> webkit; egde --> ms; firefox --> moz; opera --> o*/
+            background: -webkit-radial-gradient(center, ellipse, rgb(4, 7, 170), rgb(229, 81, 255));/*circle degraded*/
+            /*outline: 2px dashed black;/*allow create a outer border
+            outline-offset: 15px;*/
+            /*-webkit-transform: scale(0.5);/*allow scale a item*/
+            /*-webkit-transform: rotate(30deg);/*allow rotate the item*/
+            /*-webkit-transform: skew(30deg);/*modify the perspective*/
+            -webkit-transition:-webkit-transform 1s ease 0.5s;/*set a effect*/
+        }
+        #main:hover{
+            -webkit-transform: rotate(10deg);
+        }
+
+        @font-face {/*This allow show this font even if user doesn't have it*/
+            font-family: "MyOwnFont"; /*You can use it where you want in your code only typing the name*/
+            src: url("vinet.ttf");
+        }
+        #title{
+            font: bold 36px "MyOwnFont";
+            text-shadow: rgb(246, 21, 21) 3px 3px 2px;
+            color: rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main">
+        <span id="title">CSS Style</span>
+    </header>
+    
+</body>
+</html>
