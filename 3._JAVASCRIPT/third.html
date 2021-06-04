@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function firstalert(){
+            alert("hi, I m your image")
+        }
+        function secondalert(){
+            alert("hi, I m the paragraph")
+        }
+        function myevent(){
+            var myitem = document.getElementsByTagName("p")[0];
+            var myitem1 = document.getElementsByTagName("img")[0];
+
+            myitem.addEventListener("click", secondalert, false)
+            myitem1.addEventListener("click", firstalert, false)
+        }   
+        window.addEventListener("load", myevent, false)
+
+
+    </script>
+
+</head>
+<body>
+    <p>
+        <img src="/images/dark1.jpg" alt="">
+    </p>
+</body>
+</html>
+<!--    last video fifteen  -->

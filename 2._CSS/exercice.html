@@ -7,12 +7,10 @@
     <title>Document</title>
     <style>
         body{
-            background: -webkit-radial-gradient(left,ellipse, rgb(0, 238, 255), rgb(133, 81, 255))
+            background: -webkit-linear-gradient(left, #30E8BF, #FF8235)
         }
-        div{
-            display: inline-block;
-            text-align: center;
-            -webkit-transition:-webkit-transform 0.3s ease 0.1s;
+        figure{
+            float: left;
             
         }
         img{
@@ -20,19 +18,21 @@
             height: 200px;
             border: 3px solid gray;
             border-radius: 15px;
-            margin-left: 20px;
+            margin-left: 15px;
+            box-shadow: gray 8px 8px 15px;
+            -webkit-transition:-webkit-transform 0.3s ease 0.1s;
         }
-        #mydiv:hover{
+        img:hover{
             -webkit-transform: scale(1.1)
         }
         #mysection{
             /*outline: 2px dashed black;*/
-            margin-top: 10px;
-            margin-left: 20px;
+            width: 91%;
+            margin: 15px auto;
             border-top: 1px dashed rgba(0, 0, 0, 0.952);
         }
         header{
-            border: 3px solid blue;
+            border: 3px solid rgb(70, 139, 248);
             border-radius: 15px;
             box-shadow: blue 15px 15px 10px;
             margin: 25px auto;
@@ -45,6 +45,18 @@
         }
         span{
             font: bold 20px Verdana;
+            text-shadow: white 2px 2px 4px;
+        }
+        h2{
+            font: normal 2.4em Verdana, Geneva, sans-serif;
+            font-size: medium;
+        }
+        figcaption{
+            text-align: center;
+        }
+        #myfooter{
+            clear: both;
+            margin: 10px 8px;
         }
     </style>
 </head>
@@ -56,70 +68,44 @@
         <h2>A flower selection</h2>
     </nav>
     <section id="mysection">
-        <ul>
-            <div id="mydiv">
-                <article>
-                    <figure>
-                        <img src="/images/flower1.jpg">
-                    </figure>
-                    <footer>
-                        <p>flower 1. beautiful spring</p>
-                    </footer>
-                </article>
-            </div>
-            <div id="mydiv">
-                <article>
-                    <figure>
-                        <img src="/images/flower2.jpg">
-                    </figure>
-                    <footer>
-                        <p>flower 2. tropical weather</p>
-                    </footer>
-                </article>
-            </div>
-            <div id="mydiv">
-                <article>
-                    <figure>
-                        <img src="/images/flower3.jpg">
-                    </figure>
-                    <footer>
-                        <p>flower 3. </p>
-                    </footer>
-                </article>
-            </div>
-            <div id="mydiv">
-                <article>
-                    <figure>
-                        <img src="/images/flower4.jpg">
-                    </figure>
-                    <footer>
-                        <p>flower 4.</p>
-                    </footer>
-                </article>
-            </div>
-            <div id="mydiv">
-                <article>
-                    <figure>
-                        <img src="/images/flower5.jpg">
-                    </figure>
-                    <footer>
-                        <p>flower 5.</p>
-                    </footer>
-                </article>
-            </div>
-            <div id="mydiv">
-                <article>
-                    <figure>
-                        <img src="/images/flower7.jpg">
-                    </figure>
-                    <footer>
-                        <p>flower 6.</p>
-                    </footer>
-                </article>
-            </div>
-        </ul>
+        <figure>
+            <img src="/images/flower1.jpg">
+            <figcaption>
+                <p>flower 1. beautiful spring</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="/images/flower2.jpg">
+            <figcaption>
+                <p>flower 2. beautiful autom</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="/images/flower3.jpg">
+            <figcaption>
+                <p>flower 3. beautiful spring</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="/images/flower4.jpg">
+            <figcaption>
+                <p>flower 4. beautiful spring</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="/images/flower5.jpg">
+            <figcaption>
+                <p>flower 5. beautiful spring</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="/images/flower7.jpg">
+            <figcaption>
+                <p>flower 6. beautiful spring</p>
+            </figcaption>
+        </figure>
     </section>
-    <footer>
+    <footer id="myfooter">
         <small>Copyright 2021, www.lorianfate.com</small>
     </footer>
 </body>

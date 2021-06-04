@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var myimage=new Array(3);
+        function flower(){
+            alert("knowledge")
+        }
+        function manageflower(){
+            for (var i=0;i<4;i++){
+            myimage[i] = document.getElementsByTagName("img")[i];
+            }
+            myimage[0].addEventListener("mouseover", function(){myimage[0].width=225; myimage[0].height=225;},false); 
+            myimage[0].addEventListener("mouseout", function(){myimage[0].width=500; myimage[0].height=500;}, false)
+            myimage[0].addEventListener("click", flower, false)
+            
+            myimage[1].addEventListener("mouseover", function(){myimage[1].width=225; myimage[1].height=225;},false); 
+            myimage[1].addEventListener("mouseout", function(){myimage[1].width=500; myimage[1].height=500;}, false)
+            myimage[1].addEventListener("click", flower, false)
+
+            myimage[2].addEventListener("mouseover", function(){myimage[2].width=225; myimage[2].height=225;},false); 
+            myimage[2].addEventListener("mouseout", function(){myimage[2].width=500; myimage[2].height=500;}, false)
+            myimage[2].addEventListener("click", flower, false)
+
+            myimage[3].addEventListener("mouseover", function(){myimage[3].width=225; myimage[3].height=225;},false); 
+            myimage[3].addEventListener("mouseout", function(){myimage[3].width=500; myimage[3].height=500;}, false)
+            myimage[3].addEventListener("click", flower, false)
+        }
+        /*function grown(){
+            myimage.width=225;
+            myimage.height=225;
+        }
+        function decrease(){
+            myimage.width=500;
+            myimage.height=500;
+        }*/
+        //window.onload = manageflower;
+        window.addEventListener("load", manageflower, false);
+    </script>
+    <!--<style>
+        img{
+            width: 280px;
+            height: 300px;
+        }
+    </style>-->
+
+</head>
+<body>
+    <p>
+        <img src="/images/flowers6.jpg">
+        <img src="/images/flower1.jpg">
+        <img src="/images/flower4.jpg">
+        <img src="/images/flower5.jpg">
+    </p>
+</body>
+</html>
