@@ -5,15 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="video.css">
 </head>
 <body>
     <section id="video">
-        <video id="myvideo" width="600" controls></video>
-        <source src="video/SO_UI_U02_interviews.mp4">
+        <video id="myvideo" width="720" loop>
+            <source src="/video/SO_UI_U02_interviews.mp4">   
+        </video>
+        <nav><!-- to create our own button control-->
+            <div id=buttons>
+                <button type="button" id="plays">play</button>
+            </div>
+            <div id="bar">
+                <div id="progress">
+
+                </div>
+            </div>
+        </nav>
     </section>
 </body>
 </html>
-
 <!--
 
     <video></video>
@@ -24,5 +35,5 @@
         -loop: allow play our video in loop
         -poster: allow include a jpg image as a cover page before play the video
         -preload: allow specify some specific features, 
-
+last 18-9:34
 -->
