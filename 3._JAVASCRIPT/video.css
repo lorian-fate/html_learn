@@ -18,3 +18,17 @@ nav{
     width: 100px;
     height: 20px;
 }
+#bar{
+    background-color: aliceblue;
+    width: 630px;
+    height: 16px;
+    border: 1px solid gray;
+    padding: 3px;
+    margin-left: 60px;
+}
+#progress{
+    position: absolute;
+    width: 0px;
+    height: 16px;
+    background-color: rgba(0,0,150,2);
+}

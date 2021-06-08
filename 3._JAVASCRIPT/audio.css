@@ -1,0 +1,34 @@
+
+#audio{
+    width: 720px;
+    margin: 20px auto;
+    background-color: brown;
+    padding: 5px;
+    border: 2px solid rgb(59, 20, 20);
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+
+}
+nav{
+    margin: 5px 0;
+}
+#buttons{
+    float: left;
+    width: 100px;
+    height: 20px;
+}
+#bar{
+    background-color: aliceblue;
+    width: 630px;
+    height: 16px;
+    border: 1px solid gray;
+    padding: 3px;
+    margin-left: 60px;
+}
+#progress{
+    position: absolute;
+    width: 0px;
+    height: 16px;
+    background-color: rgba(0,0,150,2);
+}
