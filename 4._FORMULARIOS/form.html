@@ -8,12 +8,19 @@
 </head>
 <body>
     <form name="myform" id="myform" method="GET" autocomplete="off">
-        <!--Email:&nbsp;<input type="email" name="email" id="email"><br><br>
+        Email:&nbsp;<input type="email" name="email" id="email" required multiple><br><br>
         Search:&nbsp;<input type="search" name="search" id="search"><br><br>
-        Url:&nbsp;<input type="url" name="url" id="url"><br><br>-->
-        Age:&nbsp;<input type="number" name="age" id="age" min="1" max="120">
+        Url:&nbsp;<input type="url" name="url" id="url" autofocus><br><br>
+        Age:&nbsp;<input type="range" name="age" id="age" min="0" max="200"><br><br><!-- step=""->define the jump-->
+
+        Date:&nbsp;<input type="datetime" name="date" id="date"><br><br>
+        Postal code:&nbsp;<input pattern="[0-9]{5}" name="cpostal" id="cpostal" placeholder="5 digits">
+        
         <input type="submit" value="send">
     </form>
+    <section>
+        Name:&nbsp; <input type="text" name="name" id="name" form="myform">
+    </section>
 </body>
 </html>
 
@@ -26,6 +33,12 @@
         -Boolean
     
     Attributes:
+        -placeholder: allow include some instructions
+        -required:allow make a required file
+        -multiple: allow send more than one data in one field
+        -autofocus: allow focus on the field
+        -pattern: allow set certain complex validation in field as a postal code
+        -form: allow build a form
         -type:
             *text
             *Email
@@ -34,7 +47,7 @@
             *Tel
             *Number: with minimum, maximum and step
             *Range: with max, min and step
-            *Sate
+            *Date
             *Week
             *Month
             *Time

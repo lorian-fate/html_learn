@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table{
+                text-align: center;
+                background-color: aqua;
+                width: 25%;
+                margin: auto;
+                border: 2px green dashed;
+            }
+            td{
+                padding: 15px;
+            }
+        </style>
+        <script>
+            function startscript(){
+                var name = document.getElementById("name");
+                var lastname = document.getElementById("lastname");
+                
+                name.addEventListener("input", validate, false);
+                lastname.addEventListener("input", validate, false);
+                validate();
+            }
+            function validate(){
+                if (name.value=="" && lastname.value==""){
+                    name.setCustomValidity("type name or lastname");
+                    name.style.background="#DA0505";
+                    lastname.style.background="#DA0505";
+                }
+                else{
+                    name.setCustomValidity("");
+                    name.style.background ="white";
+                    lastname.style.background = "white";
+                }
+            }
+            window.addEventListener("load", startscript, false);
+        </script>
+    </head>
+    <body>
+        <section>
+            <form name="log user" method="GET">
+                <!--<datalist id="information">
+                    <option value="321654789" label="telephone 1"></option>
+                    <option value="789654321" label="telephone 2"></option>
+                    <option value="456123789" label="telephone 2"></option>
+                </datalist>
+                Telephone:&nbsp;<input type="tel" name="telephone" id="telephone" list="information">-->
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" name="name" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td>Last name</td>
+                        <td><input type="text" name="lastname" id="lastname"></td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td><input type="number" name="age" id="age" min="1" max="100"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="log"></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </body>
+</html>
+<!--
+    -datalist
+    -API forms:
+        -setCustomValidity() method: allow custom the error message
+        -invalid event
+        -validityState object
+-->
