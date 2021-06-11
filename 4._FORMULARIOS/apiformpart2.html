@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta nombre="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table{
+                text-align: center;
+                background-color: aqua;
+                width: 25%;
+                margin: auto;
+                border: 2px green dashed;
+            }
+            td{
+                padding: 15px;
+            }
+        </style>
+        <script>
+            var age1;
+            function startscript(){
+                age1 = document.getElementById("age");
+                age1.addEventListener("change", changerange, false);
+                document.user_data.addEventListener("invalid", validatefield, true);
+                document.getElementById("sendform").addEventListener("click", mysend, false);
+
+                document.user_data.addEventListener("input", current_validate, false)
+            }
+            function changerange(){
+                var myexit = document.getElementById("rango");
+                var mycal = age1.value - 30;
+                if (mycal<30){
+                    mycal = 0;
+                    age1.value=30;
+                }
+                myexit.innerHTML=mycal + " a " + age1.value;
+            }
+            function validatefield(e){
+                var myitem = e.target;
+                myitem.style.background = "#FFDDDD";
+
+            }
+            function mysend(){
+                var userbox = document.getElementById("user1");
+                var correctdata = document.user_data.checkValidity();
+                if (correctdata==true){
+                    document.user_data.submit();
+                }
+                else if (userbox.validity.valueMissing==true || userbox.validity.patternMismatch==true){
+                    alert("user cannot be empty and must have more than three letters");
+                }
+            }
+            function current_validate(e){
+                var myitem = e.target;
+                if (myitem.validity.valid==true){
+                    myitem.style.background = "#FFFFFF";
+                }
+                else{
+                    myitem.style.background = "#FFDDDD";
+                }
+            }
+            window.addEventListener("load", startscript, false);
+        </script>
+    </head>
+    <body>
+        <section>
+            <form name="user_data" method="GET">
+                <table>
+                    <tr>
+                        <td>User</td>
+                        <td><input pattern="[A-Za-z]{3}" name="user1" id="user1" maxlength="10" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="myemail" id="myemail" required></td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td><input type="range" name="age" id="age" min="0" max="120" value="30" step="30"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <output id="rango">0 a 30</output>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="log" id="sendform"></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </body>
+</html>
+
+<!--
+    Validity property:
+        -valueMissing: true when the field is required and is empty
+        -patternMismathc: true when the value doesnt match with the pattern format
+        -typeMismatch: true when the sintax doesnt match with the field's type
+        -tooLong: true when exceeding the maxlength
+        -rangeUnderflow: true when exceeding the minlength
+        -rangeOverflow: true when exceeding the maxlength
+        -stepMismatch: true when the number's value doesnt correspond with the step
+        -customError: true when we declare customized error with setCustomValidity
+-->

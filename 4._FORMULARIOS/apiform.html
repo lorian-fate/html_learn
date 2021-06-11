@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta nombre="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <style>
             table{
@@ -19,23 +19,23 @@
         </style>
         <script>
             function startscript(){
-                var name = document.getElementById("name");
-                var lastname = document.getElementById("lastname");
+                name1 = document.getElementById("name");
+                lastname = document.getElementById("lastname");
                 
-                name.addEventListener("input", validate, false);
-                lastname.addEventListener("input", validate, false);
-                validate();
+                name1.addEventListener("input", validatefield, false);
+                lastname.addEventListener("input", validatefield, false);
+                validatefield();
             }
-            function validate(){
-                if (name.value=="" && lastname.value==""){
-                    name.setCustomValidity("type name or lastname");
-                    name.style.background="#DA0505";
+            function validatefield(){
+                if (name1.value=='' && lastname.value==''){
+                    name1.setCustomValidity("type nombre or lastname");
+                    name1.style.background="#DA0505";
                     lastname.style.background="#DA0505";
                 }
                 else{
-                    name.setCustomValidity("");
-                    name.style.background ="white";
-                    lastname.style.background = "white";
+                    name1.setCustomValidity("");
+                    name1.style.background ='#FFFFFF';
+                    lastname.style.background = '#FFFFFF';
                 }
             }
             window.addEventListener("load", startscript, false);
@@ -49,14 +49,14 @@
                     <option value="789654321" label="telephone 2"></option>
                     <option value="456123789" label="telephone 2"></option>
                 </datalist>
-                Telephone:&nbsp;<input type="tel" name="telephone" id="telephone" list="information">-->
+                Telephone:&nbsp;<input type="tel" nombre="telephone" id="telephone" list="information">-->
                 <table>
                     <tr>
-                        <td>Name</td>
+                        <td>nombre</td>
                         <td><input type="text" name="name" id="name"></td>
                     </tr>
                     <tr>
-                        <td>Last name</td>
+                        <td>Last nombre</td>
                         <td><input type="text" name="lastname" id="lastname"></td>
                     </tr>
                     <tr>

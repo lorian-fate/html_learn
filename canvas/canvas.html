@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mycanvas{
+            background-color: blueviolet;
+            
+        }
+        section{
+            width: 500px;
+            position: relative;
+            margin: auto;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", startscript, false)
+
+        function startscript(){
+            var myitem = document.getElementById("mycanvas");
+            mycanvas = myitem.getContext("2d");
+            mycanvas.strokeStyle="blue";
+            mycanvas.fillStyle = "orange";
+            mycanvas.globalAlpha = 0.2;
+            mycanvas.strokeRect(100, 100, 120, 120);
+            mycanvas.fillRect(110, 110, 100, 100);
+            mycanvas.clearRect(120, 120, 80, 80);
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <section id="drew">
+        <canvas id="mycanvas" width="500" height="300">
+
+        </canvas>
+    </section>
+</body>
+</html>
+<!--
+    canvas method:
+        -getContext("2d");
+        -fillRect(x, y, ancho, alto): draw a solid rectangle
+        -strokeRect(x, y, ancho, alto): draw a empty rectangle
+        -clearRect(x, y, ancho, alto): clean a rectangle
+    canvas properties:
+        -strokeStyle: 
+        -fillStyle: property of filler color
+        -globalAlpha: transparency of all shape
+-->

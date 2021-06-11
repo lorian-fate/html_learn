@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 500px;
+            margin: auto;
+        }
+        /*#mycanvas{
+            background-color: red;
+        }*/
+    </style>
+    <script>
+        window.addEventListener("load", starts, false);
+
+        function starts(){
+            var myitem = document.getElementById("mycanvas");
+            mycanva = myitem.getContext("2d");
+            /*var degrade = mycanva.createLinearGradient(0, 150, 500, 150);
+            degrade.addColorStop(1, "green");
+            degrade.addColorStop(0, "red");
+            mycanva.fillStyle = degrade;
+
+            mycanva.fillRect(0, 0, 500, 300)*/
+            
+            var degrade = mycanva.createRadialGradient(250, 150, 50, 250, 150, 300);
+            degrade.addColorStop(0, "green");
+            degrade.addColorStop(1, "red");
+            mycanva.fillStyle = degrade;
+
+            mycanva.fillRect(0, 0, 500, 300);
+        }
+    </script>
+</head>
+<body>
+    <section id="mydrew">
+        <canvas id="mycanvas">
+
+        </canvas>
+    </section>
+</body>
+</html>
+<!--
+    canvas items:
+        -createLinearGradient(x1, y1, z1, x2, y2, z2)
+        -createRadialGradient(x1, y1, z1, x2, y2, z2)
+        -addColorStop(position, color)
+    
+    last video 28
+-->

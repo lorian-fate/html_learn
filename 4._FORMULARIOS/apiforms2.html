@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formularios</title>
+        <script>
+        function iniciar(){
+            nombre1=document.getElementById("nombre");
+            nombre2=document.getElementById("apellido");
+            nombre1.addEventListener("input", validacion, false);
+            nombre2.addEventListener("input", validacion, false);
+            validacion();
+        }
+        function validacion(){
+            if(nombre1.value=='' && nombre2.value==''){
+                nombre1.setCustomValidity('inserte al menos un nombre');
+                nombre1.style.background="#DA0505";
+                nombre2.style.background='#FFDDDD';
+            }
+            else{
+                nombre1.setCustomValidity('');
+                nombre1.style.background='#FFFFFF';
+                nombre2.style.background='#FFFFFF';
+            }
+        }
+        window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <section>
+            <!--<form name="registracion" method="get">
+                Nombre:
+                <input type="text" name="nombre" id="nombre">
+                Apellido:
+                <input type="text" name="apellido" id="apellido">
+                <input type="submit" id="send" value="ingresar">
+            </form>-->
+            <form name="log user" method="GET">
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" name="name" id="nombre"></td>
+                    </tr>
+                    <tr>
+                        <td>Last name</td>
+                        <td><input type="text" name="lastname" id="apellido"></td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td><input type="number" name="age" id="age" min="1" max="100"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="log"></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </body>
+</html>
